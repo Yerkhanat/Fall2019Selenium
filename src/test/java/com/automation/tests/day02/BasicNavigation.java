@@ -30,6 +30,7 @@ public class BasicNavigation {
         Thread.sleep(1000);
         driver.navigate().refresh();
         System.out.println("Title is "+driver.getTitle());
+        System.out.println("Current url is "+ driver.getCurrentUrl());
 
       //=========================
       driver.close();
