@@ -18,6 +18,10 @@ public class GoogleSearchTest {
         //System.out.println(search);
         search.sendKeys("Mongolian Rap", Keys.ENTER);
         Thread.sleep(2000);
+        WebElement news = driver.findElement(By.linkText("News"));
+        news.click();
+        Thread.sleep(2000);
+
         //==========================================
         driver.quit();
 
