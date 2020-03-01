@@ -16,6 +16,31 @@ public class JumpToTheNewWindow {
         System.out.println(windowHandle);
         Set<String> windowHandles = driver.getWindowHandles();
         System.out.println(windowHandles);
+        System.out.println("before switching "+ driver.getCurrentUrl());
+        for (String each :windowHandles) {
+            if(!each.equals(driver.getWindowHandle())){
+                driver.switchTo().window(each);
+            }
+
+        }
+        System.out.println("after switching the tab "+ driver.getCurrentUrl());
+        //===============================
+        driver.close();
+    }
+
+    public static void switchToWindowsBasedOnTitle(String pageTitle, WebDriver driver) {
+        Set<String> windows = driver.getWindowHandles();
+        for (String window : windows) {
+            driver.switchTo().window(window);
+            if (driver.getTitle().equals(pageTitle)) {
+                break;
+
+            }
+
+        }
+
 
     }
+
 }
+
