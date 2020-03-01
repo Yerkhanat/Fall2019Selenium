@@ -26,6 +26,10 @@ public class BasicNavigation {
       }
       driver.navigate().back();
       verifyEquals(driver.getTitle(),"Google");
+      driver.navigate().forward();
+        Thread.sleep(1000);
+        driver.navigate().refresh();
+        System.out.println("Title is "+driver.getTitle());
 
       //=========================
       driver.close();
