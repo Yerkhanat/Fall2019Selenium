@@ -12,8 +12,17 @@ public class BasicNavigation {
         WebDriverManager.chromedriver().setup();
         WebDriver driver  = new ChromeDriver();
         driver.get("http://google.com");
-        Thread.sleep(3000);
+
+
+        Thread.sleep(5000);
+      if(driver.getTitle().equals("Google")){
+            System.out.println("Title test is passed");
+        }else{
+          System.out.println("Test test is failed");
+      }
         driver.close();
+
+
 
 
 
