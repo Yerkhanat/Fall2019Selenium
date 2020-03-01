@@ -10,7 +10,11 @@ public class JumpToTheNewWindow {
     public static void main(String[] args) throws Exception{
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
+//        driver.get("http://google.com");
+//        Thread.sleep(2000);
         driver.get("http://practice.cybertekschool.com/open_new_tab");
+        //driver.switchTo().window("http://google.com");
+
         Thread.sleep(5000);
         String windowHandle = driver.getWindowHandle();
         System.out.println(windowHandle);
@@ -24,8 +28,13 @@ public class JumpToTheNewWindow {
 
         }
         System.out.println("after switching the tab "+ driver.getCurrentUrl());
+
+        switchToWindowsBasedOnTitle("Practice",driver);
+        System.out.println(driver.getCurrentUrl());
+
+
         //===============================
-        driver.close();
+        driver.quit();
     }
 
     public static void switchToWindowsBasedOnTitle(String pageTitle, WebDriver driver) {
