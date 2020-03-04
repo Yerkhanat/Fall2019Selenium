@@ -13,7 +13,8 @@ public class FindElementsPractice {
         driver.findElement(By.name("full_name")).sendKeys("Yerkhanat Myedyeukhan");
         driver.findElement(By.name("email")).sendKeys("erha.mts@gmail.com");
         driver.findElement(By.className("radius")).submit();
-        if(driver.findElement(By.name("signup_message")).getText().equals("Thank you for signing up. Click the button below to return to the home page.")){
+        if(driver.findElement(By.name("signup_message")).getText().equals("Thank you for signing up. " +
+                "Click the button below to return to the home page.")){
             System.out.println("Test passed");
 
         }else {
