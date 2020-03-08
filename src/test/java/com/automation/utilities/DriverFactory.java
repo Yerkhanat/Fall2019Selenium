@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class DriverFactory {
 
@@ -23,9 +24,10 @@ public class DriverFactory {
         }else if(browserName.equalsIgnoreCase("Interner Explorer") ||(browserName.equalsIgnoreCase("IE") ) ){
             WebDriverManager.iedriver().setup();
             return new InternetExplorerDriver();
+        }else if(browserName.equalsIgnoreCase("safari")){
+            return new SafariDriver();
         }else {
-            WebDriverManager.operadriver().setup();
-            return new OperaDriver();
+            return null;
         }
     }
 
