@@ -7,7 +7,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class BasicNavigationTests {
+public class BasicNavigationTests1 {
     public static void main(String[] args) {
        WebDriver driver = DriverFactory.CreateDriver("safari");
        //WebDriver driver =DriverFactory.CreateDriver("chrome");
